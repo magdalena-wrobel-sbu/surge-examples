@@ -542,7 +542,7 @@ def setgeo(rundata):
     #   [minlev, maxlev, fname]
 
     # == setfixedgrids.data values ==
-    rundata.fixed_grid_data.fixedgrids = []
+    #rundata.fixed_grid_data.fixedgrids = []
     # for fixed grids append lines of the form
     # [t1,t2,noutput,x1,x2,y1,y2,xpoints,ypoints,\
     #  ioutarrivaltimes,ioutsurfacemax]
@@ -601,7 +601,7 @@ def set_friction(rundata):
     # Entire domain
     data.friction_regions.append([rundata.clawdata.lower, 
                                   rundata.clawdata.upper,
-                                  [np.infty,0.0,-np.infty],
+                                  [np.inf,0.0,-np.inf],
                                   [0.050, 0.025]])
 
     return data
